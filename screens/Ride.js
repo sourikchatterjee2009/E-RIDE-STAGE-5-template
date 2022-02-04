@@ -69,11 +69,7 @@ export default class RideScreen extends Component {
           var { bikeType, userName } = this.state;
 
           this.assignBike(bikeId, userId, bikeType, userName);
-          // For Android users only
-          // ToastAndroid.show(
-          //   "You have rented the bike for next 1 hour. Enjoy your ride!!",
-          //   ToastAndroid.SHORT
-          // );
+         
 
           Alert.alert(
             "You have rented the bike for next 1 hour. Enjoy your ride!!"
@@ -87,12 +83,7 @@ export default class RideScreen extends Component {
 
           this.returnBike(bikeId, userId, bikeType, userName);
 
-          // For Android users only
-          // ToastAndroid.show(
-          //   "We hope you enjoyed your ride",
-          //   ToastAndroid.SHORT
-          // );
-
+        
           Alert.alert("We hope you enjoyed your ride");
           this.setState({
             bikeAssigned: false
@@ -199,7 +190,6 @@ export default class RideScreen extends Component {
       );
     }
     return (
-      <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <View style={styles.upperContainer}>
           <Image source={appIcon} style={styles.appIcon} />
           <Text style={styles.title}>e-ride</Text>
@@ -239,7 +229,6 @@ export default class RideScreen extends Component {
             </Text>
           </TouchableOpacity>
         </View>
-      </KeyboardAvoidingView>
     );
   }
 }
