@@ -73,7 +73,7 @@ export default class RideScreen extends Component {
 
           
           //Add a alert box to display "You have rented the bike for next 1 hour. Enjoy your ride!!"
-          
+          Alert.alert("You have rented the bike for next 1 hour")
 
           this.setState({
             bikeAssigned: true
@@ -200,6 +200,7 @@ export default class RideScreen extends Component {
             <TextInput
               style={[styles.textinput, { width: "82%" }]}
 //Add the code to make TextInput editable for accepting userID
+              onChangeText={text => this.setState({ userId: text })}
               placeholder={"User Id"}
               placeholderTextColor={"#FFFFFF"}
               value={userId}
